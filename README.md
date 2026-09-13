@@ -3,14 +3,14 @@
 ```python
 chao_moi_nguoi = print
 
-
 class __Welcome_to_my_profile__:
     def __init__(self):
         self.ten = "Nguyễn Tấn Nghĩa"
         self.nam_sinh = 2009
-        self.tuoi = 2026 - self.nam_sinh
+        self.tuoi = 2206 - self.nam_sinh
         self.que = "Gia Lai, Bình Định cũ"
         self.nn_lt = ["PYTHON", "JAVA"]
+        self.thich = ["Coding", "Gaming", "Music", "Chill"]
 
     def __chao_moi_nguoi__(self):
         chao_moi_nguoi("╔══════════════════════════════════════╗")
@@ -30,7 +30,15 @@ class __Welcome_to_my_profile__:
             chao_moi_nguoi(f"   {i}. {nn}")
 
         chao_moi_nguoi("")
-        chao_moi_nguoi("Thanks for visiting! ✨")
+        chao_moi_nguoi("🎮 Sở thích:")
+
+        for st in self.thich:
+            chao_moi_nguoi(f"   - {st}")
+
+        chao_moi_nguoi("")
+        chao_moi_nguoi("─" * 40)
+        chao_moi_nguoi("✨ Thanks for visiting! ✨")
+        chao_moi_nguoi("─" * 40)
 
 
 me = __Welcome_to_my_profile__()
