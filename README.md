@@ -1,48 +1,33 @@
 # 👋 Xin chào, mình là Nguyễn Tấn Nghĩa
 
 ```python
-chao_moi_nguoi = print
+import sys
+from dataclasses import dataclass, field
 
-class __Welcome_to_my_profile__:
-    def __init__(self):
-        self.ten = "Nguyễn Tấn Nghĩa"
-        self.nam_sinh = 2009
-        self.tuoi = 2206 - self.nam_sinh
-        self.que = "Gia Lai, Bình Định cũ"
-        self.nn_lt = ["PYTHON", "JAVA"]
-        self.thich = ["Coding", "Gaming", "Music", "Chill"]
+@dataclass
+class Developer:
+    name: str = "Nguyễn Tấn Nghĩa"
+    alias: str = "Tnghia"
+    year: int = 2009
+    origin: str = "Gia Lai · Bình Định cũ"
+    languages: list = field(default_factory=lambda: ["Python", "Java"])
+    interests: list = field(default_factory=lambda: ["Coding", "Gaming", "Music", "Chill"])
 
-    def __chao_moi_nguoi__(self):
-        chao_moi_nguoi("╔══════════════════════════════════════╗")
-        chao_moi_nguoi("║    🌈 WELCOME TO MY PROFILE 🌈      ║")
-        chao_moi_nguoi("╚══════════════════════════════════════╝")
-        chao_moi_nguoi("")
+    def display(self):
+        bar = "─" * 38
+        print(f"\n  {bar}")
+        print(f"  tng@dev  ~  profile.py")
+        print(f"  {bar}")
+        print(f"\n  {'name':<12} {self.name}")
+        print(f"  {'alias':<12} {self.alias}")
+        print(f"  {'born':<12} {self.year}")
+        print(f"  {'origin':<12} {self.origin}")
+        print(f"\n  [languages]  {' · '.join(self.languages)}")
+        print(f"  [interests]  {' · '.join(self.interests)}")
+        print(f"\n  {bar}")
+        print(f"  ∞  still learning · building things · having fun _\n")
 
-        chao_moi_nguoi(f"👤 Họ tên   : {self.ten}")
-        chao_moi_nguoi(f"🎂 Năm sinh : {self.nam_sinh}")
-        chao_moi_nguoi(f"⏳ Tuổi     : {self.tuoi}")
-        chao_moi_nguoi(f"📍 Quê quán : {self.que}")
-
-        chao_moi_nguoi("")
-        chao_moi_nguoi("💻 Ngôn ngữ:")
-
-        for i, nn in enumerate(self.nn_lt, 1):
-            chao_moi_nguoi(f"   {i}. {nn}")
-
-        chao_moi_nguoi("")
-        chao_moi_nguoi("🎮 Sở thích:")
-
-        for st in self.thich:
-            chao_moi_nguoi(f"   - {st}")
-
-        chao_moi_nguoi("")
-        chao_moi_nguoi("─" * 40)
-        chao_moi_nguoi("✨ Thanks for visiting! ✨")
-        chao_moi_nguoi("─" * 40)
-
-
-me = __Welcome_to_my_profile__()
-me.__chao_moi_nguoi__()
+Developer().display()
 ```
 
 ## 🌈 Về mình
